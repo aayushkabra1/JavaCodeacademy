@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8854a111-4777-47ae-9086-607edfaf834f" name="Changes" comment="Added some Collections operations.">
+    <list default="true" id="8854a111-4777-47ae-9086-607edfaf834f" name="Changes" comment="Added some Map operations.">
+      <change afterPath="$PROJECT_DIR$/src/CrystalBall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FortuneTeller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -78,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671943408156</updated>
       <workItem from="1671943409137" duration="3213000" />
-      <workItem from="1671946789670" duration="301000" />
+      <workItem from="1671946789670" duration="2232000" />
     </task>
     <task id="LOCAL-00001" summary="Added some ArrayList operations.">
       <created>1671943708539</created>
@@ -108,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671945339743</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added some Map operations.">
+      <created>1671947429260</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671947429260</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +146,7 @@
     <MESSAGE value="Added some Set operations." />
     <MESSAGE value="Added some PriorityQueue operations." />
     <MESSAGE value="Added some Deque operations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some Deque operations." />
+    <MESSAGE value="Added some Map operations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some Map operations." />
   </component>
 </project>

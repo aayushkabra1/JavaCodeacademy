@@ -1,14 +1,14 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        List<String> stringList = new ArrayList<>();
+        Set<String> stringSet = new TreeSet<>();
 
-        stringList.add("Hello");
-        stringList.add("World");
-        stringList.add("!");
+        stringSet.add("Hello");
+        stringSet.add("World");
+        stringSet.add("Hello");
 
-        for (String element : stringList) {
+        for (String element : stringSet) {
             System.out.println(element);
         }
     }

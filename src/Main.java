@@ -1,39 +1,33 @@
-import java.util.Deque;
-import java.util.ArrayDeque;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         List<Integer> myInts = new ArrayList<>();
-        myInts.add(9);
-        myInts.add(13);
-        myInts.add(2);
-        myInts.add(1);
-        myInts.add(11);
-        myInts.add(39);
-        myInts.add(78);
-        myInts.add(4);
+        Random random = new Random();
 
-        Deque<Integer> result = separateInts(myInts);
-        for(Integer i: result) {
-            System.out.println(i);
+        for(int i =0; i < 20; i++) {
+            myInts.add(random.nextInt(5));
+        }
+
+        Map<Integer, Integer> intCount = countNumbers(myInts);
+        for(Map.Entry<Integer, Integer> entry: intCount.entrySet()) {
+            System.out.println("Integer: "+ entry.getKey()+" appears: "+ entry.getValue());
         }
     }
 
-    // add your code here to complete separateInts()
-    public static Deque<Integer> separateInts(List<Integer> integers){
-        Deque<Integer> separatedDeque = new ArrayDeque<>();
+    public static Map<Integer, Integer> countNumbers(List<Integer> list) {
+        Map<Integer, Integer> intCount = new TreeMap<>();
+        for (Integer i : list) {
+            Integer currentCount = intCount.get(i);
 
-        for (Integer myInt : integers) {
-            if (myInt % 2 == 0) {
-                separatedDeque.offerFirst(myInt);
+            if (currentCount != null) {
+                int newCount = currentCount + 1;
+                intCount.put(i, newCount);
             }
             else {
-                separatedDeque.offerLast(myInt);
+                intCount.put(i, 1);
             }
         }
-
-        return separatedDeque;
+        return intCount;
     }
 }

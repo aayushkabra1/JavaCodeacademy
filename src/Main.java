@@ -1,30 +1,39 @@
-import java.util.Queue;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
+import java.util.Deque;
+import java.util.ArrayDeque;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
-    public static void processAlphabetically(Queue<String> queue) {
-        Queue<String> alphabeticalQueue = new PriorityQueue<>();
-        for (String name : queue) {
-            alphabeticalQueue.add(name);
-        }
+    public static void main(String[] args) {
+        List<Integer> myInts = new ArrayList<>();
+        myInts.add(9);
+        myInts.add(13);
+        myInts.add(2);
+        myInts.add(1);
+        myInts.add(11);
+        myInts.add(39);
+        myInts.add(78);
+        myInts.add(4);
 
-        while(alphabeticalQueue.peek() != null) {
-            String headElement = alphabeticalQueue.remove();
-            System.out.println("Processing: " + headElement);
+        Deque<Integer> result = separateInts(myInts);
+        for(Integer i: result) {
+            System.out.println(i);
         }
     }
 
-    public static void main(String[] args) {
-        Queue<String> line = new LinkedList<>();
-        line.add("Mike");
-        line.add("Isabel");
-        line.add("Jenny");
+    // add your code here to complete separateInts()
+    public static Deque<Integer> separateInts(List<Integer> integers){
+        Deque<Integer> separatedDeque = new ArrayDeque<>();
 
-        for(String name: line) {
-            System.out.println(name);
+        for (Integer myInt : integers) {
+            if (myInt % 2 == 0) {
+                separatedDeque.offerFirst(myInt);
+            }
+            else {
+                separatedDeque.offerLast(myInt);
+            }
         }
 
-        processAlphabetically(line);
+        return separatedDeque;
     }
 }
